@@ -1,16 +1,7 @@
 import React, {Component} from 'react';
 import Grid from '@material-ui/core/Grid';
-import TextField from '@material-ui/core/TextField';
-import * as contentful from 'contentful';
-import Course from '../components/Course';
-
-const SPACE_ID = 'se02rp9qe0mu';
-const ACCESS_TOKEN = 'Yz-nEg-RlkHTI65vtGaZ0_vbilruFFnxusgH39rwiBc';
-
-const client = contentful.createClient({
-    space: SPACE_ID,
-    accessToken: ACCESS_TOKEN
-})
+import Course from './Course';
+import client from '../../ContentfulClient';
 
 class CourseList extends Component {
     state = {
@@ -50,16 +41,11 @@ class CourseList extends Component {
         return (
             <div>
                 {this.state.courses ? (
-                    <div>
-                        <TextField style={{padding: 24}}
-                            id="searchInput"
-                            placeholder="Zoek voor vakken"
-                            margin="normal"
-                            onChange={this.onSearchInputChange} />
-                        <Grid container spacing={24} style={{padding: 24}}>
+                    <div  style={{marginLeft: 20, marginRight: 20, marginTop: 30}}>
+                        <Grid container spacing={3} justify="center">
                             {this.state.courses.map(currentCourse => (
-                                <Grid item xs={12} sm={6} lg={4} xl={3}>
-                                    <Course course={currentCourse}></Course>
+                                <Grid item xs={12} sm={4} lg={3} xl={2}>
+                                    <Course course={currentCourse}/>
                                 </Grid>
                             ))}
                         </Grid>

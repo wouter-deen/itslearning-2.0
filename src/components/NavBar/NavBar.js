@@ -3,7 +3,6 @@ import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -13,6 +12,9 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import CreateCourseButton from './CreateCourseButton';
+import DB_CONFIG from '../Firebase/DatabaseConfig'
+
 
 const useStyles = makeStyles(theme => ({
   grow: {
@@ -103,6 +105,11 @@ export default function PrimarySearchAppBar() {
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
+ //Uitloggen
+  const handleSignOut = () => {
+    DB_CONFIG.auth().signOut()
+  }
+
   //personaliseringsmenu
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
@@ -117,10 +124,11 @@ export default function PrimarySearchAppBar() {
     >
       <MenuItem onClick={handleMenuClose}>Instellingen</MenuItem>
       <MenuItem onClick={handleMenuClose}>Profiel</MenuItem>
+      <MenuItem onClick={handleSignOut}>Log uit</MenuItem>
     </Menu>
   );
 
-  //voor op de mobiel het personaliseringsmenu
+  //voor op de mobiel het hele menu (meldingen + chats + personalisering)
   const mobileMenuId = 'primary-search-account-menu-mobile';
   const renderMobileMenu = (
     <Menu
@@ -141,7 +149,7 @@ export default function PrimarySearchAppBar() {
         <p>Berichten</p>
       </MenuItem>
       <MenuItem>
-        <IconButton aria-label="show 11 new notifications" color="inherit">
+        <IconButton aria-label="show 1 new notifications" color="inherit">
           <Badge badgeContent={1} color="secondary">
             <NotificationsIcon />
           </Badge>
@@ -162,21 +170,18 @@ export default function PrimarySearchAppBar() {
     </Menu>
   );
 
+  //render alle componenten
   return (
     <div className={classes.grow}>
       <AppBar position="static">
         <Toolbar>
+
           <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-          >
-            <img src="/images/logo-badge.svg" width="62%" height="62%"/>
+          href='/'>
+            <img width="60%" height="60%" alt="logo badge" src="/images/logo-badge.svg"/>
           </IconButton>
-          <Typography className={classes.title} variant="h6" noWrap>
-            ItsLearning
-          </Typography>
+
+          {/* zoekbalk */}
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
@@ -190,6 +195,9 @@ export default function PrimarySearchAppBar() {
               inputProps={{ 'aria-label': 'search' }}
             />
           </div>
+          
+          {/* vaksite aanmaken knop */}
+          <CreateCourseButton/>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <IconButton aria-label="show 2 new mails" color="inherit">
