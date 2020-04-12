@@ -1,4 +1,4 @@
-As I'm a Dutch student, I will initially only make the interface in Dutch. Later, I will hopefully make it also support English. Right now, the source code is a mix between English and Dutch. This documentation will be mostly Dutch from now on.
+**As I'm a Dutch student, I will initially only make the interface in Dutch. Later, I will hopefully make it also support English. Right now, the source code is a mix between English and Dutch. This documentation will be mostly Dutch from now on.**
 
 ## React
 
