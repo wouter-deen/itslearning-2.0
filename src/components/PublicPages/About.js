@@ -93,7 +93,7 @@ const styles = theme => ({
 });
 
 function About(props) {
-  const { classes, theme, width } = props;
+  const { classes, width } = props;
   return (
     <Fragment>
       <div style={{marginTop: 50}}>
@@ -117,7 +117,7 @@ function About(props) {
                         <Typography
                           variant={isWidthUp("lg", width) ? "h3" : "h4"}
                         >
-                            Dit is ItsLearning 2.0
+                            Dit is ItsLearning 2.0!
                         </Typography>
                       </Box>
                       <div>

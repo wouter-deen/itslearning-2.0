@@ -27,7 +27,7 @@ const Login = ({history}) => {
         return <Redirect to="/"/>
     }
 
-    {/*copyright notice*/}
+    /*copyright notice*/
     function Copyright() {
         return (
           <Typography variant="body2" color="textSecondary" align="center">
@@ -41,7 +41,7 @@ const Login = ({history}) => {
         );
     }
       
-    {/*render de pagina*/}
+    /*render de pagina*/
     return(
         <div style={{marginTop: 60}}>
             <Container component="main" maxWidth="xs">

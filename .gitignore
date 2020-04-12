@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#databases
+src/components/Firebase/DatabaseConfig.js
+src/ContentfulClient.js

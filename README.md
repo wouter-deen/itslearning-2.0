@@ -7,3 +7,7 @@ Dit project wordt gemaakt met React.js en Material UI. Ik heb voor React gekozen
 ## Material UI
 
 Hiervoor heb ik gekozen omdat het een groot framework is binnen React. Het wordt veel gebruikt en de community eromheen is groot. Bovendien is het een vrij licht framework en ziet het er erg netjes en professioneel uit. Alle gewenste functies kunnen gevonden worden in een handomdraai.
+
+## Missende files
+
+De bestanden "DatabaseConfig.js" en "ContentfulClient.js" missen in deze repo. Hierin staat gevoelige informatie over het verbinden met de twee databases die ik gebruik. Contentful wordt gebruikt voor het onderhouden van de vakken waar de leerling aan toegevoegd is. Momenteel is er nog geen systeem om gebruikers in bepaalde clusters toe te voegen. Er staan een paar testvakken op de homepagina, wanneer er ingelogd is. Deze testvakken zijn voor elke gebruiker hetzelfde. In "DatabaseConfig.js" wordt verbonden met Google Firebase. Dit wordt nu gebruikt voor gebruikersmanagement. Alleen ik kan accounts aanmaken en er is geen pagina om een account aan te maken. Dit is bewust gedaan, omdat een leerling een account van school verleend hoort te krijgen.
