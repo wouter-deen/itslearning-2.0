@@ -2,10 +2,29 @@ import React, {useCallback, useContext} from "react"
 import {withRouter, Redirect} from "react-router"
 import DB_CONFIG from "./DatabaseConfig"
 import {AuthContext} from "./Auth"
-import { Button, Grid, Container, CssBaseline, Avatar, Typography, TextField, FormControlLabel, Checkbox, Link, Box } from "@material-ui/core"
+import { Button, Grid, Container, CssBaseline, Avatar, Typography, TextField, FormControlLabel, Checkbox, Link, Box, Snackbar} from "@material-ui/core"
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
+import Alert from '@material-ui/lab/Alert'
+
 
 const Login = ({history}) => {
+    
+    //error snackbar
+    const [open, setOpen] = React.useState(false);
+
+    const handleError = () => {
+        setOpen(true)
+    }
+
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+        return
+        }
+        
+        setOpen(false)
+    }
+
+    //login via firebase
     const handleLogin = useCallback(
         async event => {
             event.preventDefault()
@@ -16,7 +35,7 @@ const Login = ({history}) => {
                     .signInWithEmailAndPassword(email.value, password.value)
                 history.push("/")
             } catch (error) {
-                alert(error)
+                handleError()
             }
         }, [history]
     )
@@ -27,7 +46,7 @@ const Login = ({history}) => {
         return <Redirect to="/"/>
     }
 
-    /*copyright notice*/
+    //copyright notice
     function Copyright() {
         return (
           <Typography variant="body2" color="textSecondary" align="center">
@@ -40,8 +59,8 @@ const Login = ({history}) => {
           </Typography>
         );
     }
-      
-    /*render de pagina*/
+
+    //render de pagina
     return(
         <div style={{marginTop: 60}}>
             <Container component="main" maxWidth="xs">
@@ -118,6 +137,13 @@ const Login = ({history}) => {
                     <Copyright />
                 </Box>
             </Container>
+
+            {/*error bericht*/}
+            <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+                <Alert onClose={handleClose} severity="error">
+                    De inloggegevens kloppen niet.
+                </Alert>
+            </Snackbar>
         </div>
     )
 }
