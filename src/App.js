@@ -6,21 +6,23 @@ import Login from './components/Firebase/Login'
 import { AuthProvider } from './components/Firebase/Auth'
 import Homepage from './components/Homepage/Homepage'
 import CoursePage from './components/Coursepage/CoursePage'
-import About from './components/PublicPages/About'
+import About from './components/PublicPages/LandingPage'
+import TestPage from './components/TestPage'
 
 function App() {
- return (
-   <AuthProvider>
-      <Router>
-        <div>
-          <PrivateRoute exact path='/' component={Homepage}/>
-          <Route exact path='/login' component={Login}/>
-          <Route exact path='/course/:slug' component={CoursePage}/>
-          <Route exact path='/about' component={About}/>
-        </div>
-      </Router>
-   </AuthProvider>
-  );
+    return (
+        <AuthProvider>
+            <Router>
+                <div>
+                    <PrivateRoute exact path='/home' component={Homepage}/>
+                    <Route exact path='/login' component={Login}/>
+                    <PrivateRoute exact path='/course/:slug' component={CoursePage}/>
+                    <Route exact path='/' component={About}/>
+                    <PrivateRoute exact path='/test' component={TestPage}/>
+                </div>
+            </Router>
+        </AuthProvider>
+    );
 }
 
 export default App;

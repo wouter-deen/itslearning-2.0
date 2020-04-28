@@ -37,7 +37,7 @@ const Course = (props) => {
                         <Button
                         size="small"
                         variant="outlined"
-                        color="primary"
+                        color="secondary"
                         href={"course/" + props.course.fields.slug}>
                             open vaksite
                         </Button>

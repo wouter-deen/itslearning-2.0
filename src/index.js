@@ -10,11 +10,13 @@ import { indigo, red} from '@material-ui/core/colors';
 
 const theme = createMuiTheme({
   palette: {
-    secondary: red,
+    secondary: {
+      main: '#ff1464',
+    },
     primary: {
-      main: indigo.A400,
-      light: indigo[200],
-      dark: indigo[700]
+      main: '#ffff64',
+      light: '#ffff9e',
+      dark: '#e0d75a'
     }
   }
 })

@@ -26,15 +26,15 @@ export default function CreateCourseButton() {
 
                 {/* Dialog content */}
                 <DialogContent>
-                    <div><TextField id="courseName" autoFocus margin="dense" label="Vak" type="text"/></div>
-                    <div><TextField id="courseCluster" margin="dense" label="Cluster" type="text"/></div>
-                    <div><TextField id="courseTeacher" margin="dense" label="Docent" type="text"/></div>
+                    <div><TextField id="courseName" autoFocus margin="dense" label="Vak" type="text" color="secondary"/></div>
+                    <div><TextField id="courseCluster" margin="dense" label="Cluster" type="text" color="secondary"/></div>
+                    <div><TextField id="courseTeacher" margin="dense" label="Docent" type="text" color="secondary"/></div>
                 </DialogContent>
 
                 {/* Dialog actions */}
                 <DialogActions>
-                    <Button onClick={handleClose} color="primary">annuleren</Button>
-                    <Button onClick={handleClose} color="primary" disabled>aanmaken</Button>
+                    <Button onClick={handleClose} color="default">annuleren</Button>
+                    <Button onClick={handleClose} color="secondary" disabled>aanmaken</Button>
                 </DialogActions>
             </Dialog>
         </div>

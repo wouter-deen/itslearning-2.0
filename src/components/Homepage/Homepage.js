@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import NavBar from '../NavBar/NavBar'
 import CourseList from './CourseList'
-
 class Homepage extends Component {
     render () {
         return(
@@ -9,7 +8,7 @@ class Homepage extends Component {
                 <NavBar/>
                 <CourseList/>
             </div>  
-        )
+        )            
     }
 }
 

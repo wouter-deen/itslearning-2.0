@@ -108,6 +108,7 @@ export default function PrimarySearchAppBar() {
  //Uitloggen
   const handleSignOut = () => {
     DB_CONFIG.auth().signOut()
+    window.location.replace("/login")
   }
 
   //personaliseringsmenu
@@ -177,7 +178,7 @@ export default function PrimarySearchAppBar() {
         <Toolbar>
 
           <IconButton
-          href='/'>
+          href='/home'>
             <img width="60%" height="60%" alt="logo badge" src="/images/logo-badge.svg"/>
           </IconButton>
 
@@ -198,6 +199,7 @@ export default function PrimarySearchAppBar() {
           
           {/* vaksite aanmaken knop */}
           <CreateCourseButton/>
+          
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <IconButton aria-label="show 2 new mails" color="inherit">
@@ -237,5 +239,5 @@ export default function PrimarySearchAppBar() {
       {renderMobileMenu}
       {renderMenu}
     </div>
-  );
+  )
 }

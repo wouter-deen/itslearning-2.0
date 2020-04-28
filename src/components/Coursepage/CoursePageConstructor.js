@@ -10,13 +10,10 @@ class CoursePageConstructor extends Component {
     }
     
     componentDidMount() {
-        console.log("1")
         const {params} = this.props
         if(params && params.slug) {
-            console.log("2")
             client.getEntries({content_type: 'Course', 'fields.slug': params.slug})
                 .then((response) => {
-                    console.log("3")
                     console.log(response.items[0])
                     this.setState({course: response.items[0]})
             })
@@ -26,11 +23,11 @@ class CoursePageConstructor extends Component {
     render() {
         if(!this.state.course) {
             return (
-                <Typography>Course page niet gevonden. State: {this.state.course} </Typography>
+                <Typography>Er is een fout opgetreden: de vaksite is niet gevonden. </Typography>
             );
         } else return(
             <div>
-                <h1>hi</h1>
+                <h1>{this.state.course}</h1>
             </div>
         )
     }
