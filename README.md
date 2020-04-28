@@ -3,13 +3,11 @@
 ## Welcome
 
 Hey there! The regular itslearning has become very clunky to use and filled to the brim with features no one uses. Especially when server-side network traffic is at it's peak, pages can be extremely slow to respond to any interaction. When the COVID-19 outbreak began to strike its victims and all of schools portals became extremely slow, I realised I had to do something. While I've never coded anything with React.js in the past, I have a little bit of experience with JS. While fun to make a new online portal for schools (in the Netherlands), this is also a personal project to learn JavaScript development with React.js.
-An online portal like itslearning is utterly important for distance-schooling like the type the whole world needs in an international virus outbreak. It has to be fast, responsive and easy to use: from admin and teacher to student and parents. If you use itslearning a lot, you've probably experienced a lot of downtime and just low responsiveness when a lot of users are logged in to the site. And that's why you shouldn't use Bootstrap!
-This is ItsLearning 2.0. Keep on learning. ItsLearning.
+An online portal like itslearning is utterly important for distance-schooling like the type the whole world needs in an international virus outbreak. It has to be fast, responsive and easy to use: from admin and teacher to student and parents. If you use itslearning a lot, you've probably experienced a lot of downtime and just low responsiveness when a lot of users are logged in to the site. And that's why you shouldn't use Bootstrap! This is ItsLearning 2.0. Keep on learning. ItsLearning.
 
 ## Licensing
 
-I haven't had the time to dive into the theory of licensing, unfortunately.
-If you want to use any particular part of my code, feel free to do so, but please credit me (e.g. within the footer). Thanks in advance.
+I haven't had the time to dive into the theory of licensing, unfortunately. If you want to use any particular part of my code, feel free to do so, but please credit me (e.g. within the footer). Thanks in advance.
 
 ## React
 
