@@ -6,6 +6,11 @@ Hey there! The regular itslearning has become very clunky to use and filled to t
 An online portal like itslearning is utterly important for distance-schooling like the type the whole world needs in an international virus outbreak. It has to be fast, responsive and easy to use: from admin and teacher to student and parents. If you use itslearning a lot, you've probably experienced a lot of downtime and just low responsiveness when a lot of users are logged in to the site. And that's why you shouldn't use Bootstrap!
 This is ItsLearning 2.0. Keep on learning. ItsLearning.
 
+## Licensing
+
+I haven't had the time to dive into the theory of licensing, unfortunately.
+If you want to use any particular part of my code, feel free to do so, but please credit me (e.g. within the footer). Thanks in advance.
+
 ## React
 
 Dit project wordt gemaakt met React.js. Ik heb voor React gekozen, omdat het goed werkt met single page applications. Ook al is dit project niet geheel single page, streef ik er wel naar om dit zo veel mogelijk in de toekomst voor elkaar te krijgen. React is hoe dan ook beter dan Bootstrap, wat ze nu bij itslearning gebruiken.
