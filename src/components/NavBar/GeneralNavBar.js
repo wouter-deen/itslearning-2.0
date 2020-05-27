@@ -36,7 +36,7 @@ export default function LoggedOutNavBar() {
                 <AppBar position="static">
                     <Toolbar>
                         <IconButton href='/'>
-                            <img alt="logo badge" src="/images/logo-full.svg"/>
+                            <img width="60%" height="60%" alt="logo badge" src="/images/logo-badge.svg"/>
                         </IconButton>
     
                         <div style={{flexGrow: 1}}/>
@@ -51,7 +51,7 @@ export default function LoggedOutNavBar() {
                 <AppBar position="static">
                     <Toolbar>
                         <IconButton href='/'>
-                            <img alt="logo badge" src="/images/logo-full.svg"/>
+                            <img width="60%" height="60%" alt="logo badge" src="/images/logo-badge.svg"/>
                         </IconButton>
     
                         <div style={{flexGrow: 1}}/>

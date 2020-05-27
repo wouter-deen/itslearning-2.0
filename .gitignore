@@ -23,5 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 #databases
-#/src/components/Firebase/DatabaseConfig.js
-#/src/ContentfulClient.js
+/src/components/Firebase/DatabaseConfig.js
+/src/ContentfulClient.js

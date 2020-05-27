@@ -156,7 +156,7 @@ function About(props) {
 								/>
 								<CardContent className={classes.cardContent}>
 									<Typography gutterBottom variant="h5" component="h2">
-										Lorem ipsum
+										Informatica is cool
 									</Typography>
 									<Typography>
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -175,7 +175,7 @@ function About(props) {
 								/>
 								<CardContent className={classes.cardContent}>
 									<Typography gutterBottom variant="h5" component="h2">
-										Lorem ipsum
+										Ik kan niks verzinnen
 									</Typography>
 									<Typography>
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -194,7 +194,7 @@ function About(props) {
 								/>
 								<CardContent className={classes.cardContent}>
 									<Typography gutterBottom variant="h5" component="h2">
-										Lorem ipsum
+										Erg jammer weer dit
 									</Typography>
 									<Typography>
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
